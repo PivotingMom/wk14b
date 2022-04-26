@@ -1,32 +1,36 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+<div id="app">
+   <img alt="blackgirlgamerslogo" src="https://nitter.net/pic/pbs.twimg.com%2Fprofile_images%2F1476151936403521536%2F4p31wxCt.jpg" height="110">
+  <HomeView/>
+<AppFooter/>
+<router-view/>
+    
+</div>
 </template>
 
-<style lang="scss">
+<script>
+import HomeView from '@/components/HomeView.vue'
+
+import AppFooter from '@/components/AppFooter.vue'
+
+export default {
+  name: 'App',
+  components : {
+    HomeView, AppFooter
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+<style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  color: #462c50;
+  background-color: aqua;
 }
 </style>
